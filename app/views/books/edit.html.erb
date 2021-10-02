@@ -1,18 +1,22 @@
 <body>
  <h1>Editing Book</h1>
+ <!-- エラーメッセージ -->
  <% if @book.errors.any? %>
    <%= @book.errors.count %> error prohibited this book from being saved:
    <% @book.errors.full_messages.each do |message| %>
      <%= message %>
    <% end %>
  <% end %>
+ <!-- 更新用フォームを作成 -->
  <%= form_with model:@book, local:true do |f| %>
-   <p>title</p>
-   <%= f.text_field :title %>
-   <p>body</p>
-   <%= f.text_area :body %>
-   <div><%= f.submit 'Update Book' %></div>
+  <!-- タイトルを記入-->
+  <p>title</p>
+  <%= f.text_field :title %>
+  <!-- 感想文を記入 -->
+  <p>body</p>
+  <%= f.text_area :body %>
+  <div><%= f.submit 'Update Book' %></div>
  <% end %>
-
+ <!-- ShowとBooksへのリンクを作成 -->
  <%= link_to "Show",book_path(@book) %> | <a href="/books">Back</a>
 </body>

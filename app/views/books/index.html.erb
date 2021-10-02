@@ -1,4 +1,4 @@
-
+//フラッシュメッセージを表示
 <% if flash[:notice] %>
   <p><%= flash[:notice] %></p>
 <% end %>
@@ -11,7 +11,7 @@
       <th class="table-title">title</th>
       <!-- テキスト -->
       <th class="table-text">text</th>
-      <!-- 編集用 -->
+      <!-- 編集用枠 -->
       <th colspan="3"></td>
     </tr>
   </thead>
@@ -22,7 +22,7 @@
       <td class="table-title"><%= book.title %></td>
       <!-- テキスト -->
       <td class="table-text"><%= book.body %></td>
-      <!-- 編集用 -->
+      <!-- 編集、削除、閲覧のためのリンクを作成 -->
       <td><%= link_to "Show", book_path(book) %></td>
       <td><%= link_to "Edit", edit_book_path(book) %></td>
       <td><%= link_to "Destroy", book_path(book), method: :delete %></td>
@@ -31,13 +31,14 @@
   </tbody>
 </table>
 <h2>New book</h2>
-
+<!-- エラーメッセージ-->
 <% if @book.errors.any? %>
   <%= @book.errors.count %> error prohibited this book from being saved:
   <% @book.errors.full_messages.each do |message| %>
     <%= message %>
   <% end %>
 <% end %>
+<!-- タイトルと感想文を入力しデータベースへのフォームを作成-->
 <%= form_with model: @book, local:true do |f| %>
   <p>Title</p>
   <%= f.text_field :title %>

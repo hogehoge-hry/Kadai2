@@ -2,38 +2,56 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 table{
+  //displayのテーブルを使用
   display: table;
+  //最大幅を常に画面の70%とする
   width: 70%;
   box-sizing: border-box;
 }
 thead{
+  //displayのテーブルのヘッダーとして使用
   display: table-header-group;
 
 }
 tr {
+  //displayのテーブルの行として使用
   display: table-row;
 }
 tbody{
+  //displayのテーブルの行として使用
   display: table-row-group;
+  //文字を縦幅の中央に
   vertical-align: middle;
 }
 th{
+  //displayのテーブルの要素として使用
   display: table-cell;
+  //文字を太字に
   font-weight: bold;
+  //文字を中央寄せに
   text-align: center;
 }
 td{
+  //displayのテーブルの要素として使用
   display: table-cell;
-  padding: 0 5px;
+  //cellに定まっている余白を削除
+  padding: 0 0;
+  //フォントサイズは13px
   font-size: 13px;
+  //文字のための幅を18pxとする
   line-height: 18px;
+  //要素同士の幅を33pxに
   margin: 33px;
 }
 .table-title{
+  //タイトルをテーブルの幅の30％で表示
   width: 30%;
+  //文字を折り返して表示
   word-break: break-all;
 }
 .table-text{
+  //タイトルをテーブルの幅の50％で表示
   width: 50%;
+  //文字を折り返して表示
   word-break: break-all;
 }

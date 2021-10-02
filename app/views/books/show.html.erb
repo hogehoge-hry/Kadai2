@@ -1,8 +1,10 @@
-
+<!-- フラッシュメッセージを表示-->
 <% if flash[:notice] %>
   <p><%= flash[:notice] %></p>
 <% end %>
+<!-- タイトルと本文を出力-->
 <p class="table-title"><strong>Title:</strong><%= @book.title %></p>
 <p class="table-text"><strong>Body:</strong><%= @book.body %></p>
 
+<!-- 変種画面へのリンクEditと閲覧ページBooksへのリンク-->
 <%= link_to "Edit", edit_book_path(@book) %> | <a href="/books">Back</a>
