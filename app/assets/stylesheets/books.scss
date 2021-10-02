@@ -1,0 +1,39 @@
+// Place all the styles related to the blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table{
+  display: table;
+  width: 70%;
+  box-sizing: border-box;
+}
+thead{
+  display: table-header-group;
+
+}
+tr {
+  display: table-row;
+}
+tbody{
+  display: table-row-group;
+  vertical-align: middle;
+}
+th{
+  display: table-cell;
+  font-weight: bold;
+  text-align: center;
+}
+td{
+  display: table-cell;
+  padding: 0 5px;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+.table-title{
+  width: 30%;
+  word-break: break-all;
+}
+.table-text{
+  width: 50%;
+  word-break: break-all;
+}
